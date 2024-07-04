@@ -20,6 +20,13 @@ const Chip = () => {
       ease: 'power2.inOut',
     });
 
+    animateWithGsap('#gameVideo', {
+      scrollTrigger: {
+        trigger: '#gameVideo',
+        toggleActions: 'restart none none none',
+      },
+    });
+
     animateWithGsap('.g_fadeIn', {
       opacity: 1,
       y: 0,
@@ -55,6 +62,7 @@ const Chip = () => {
 
             <div className="hiw-video">
               <video
+                id="gameVideo"
                 className="pointer-events-none"
                 playsInline
                 preload="none"
