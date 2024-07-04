@@ -23,7 +23,11 @@ const Chip = () => {
     animateWithGsap('#gameVideo', {
       scrollTrigger: {
         trigger: '#gameVideo',
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none none',
+        start: '10% bottom',
+      },
+      onComplete: () => {
+        videoRef.current.play();
       },
     });
 
@@ -63,7 +67,7 @@ const Chip = () => {
             <div className="hiw-video">
               <video
                 id="gameVideo"
-                className="pointer-events-none"
+                className="pointer-events-none object-cover"
                 playsInline
                 preload="none"
                 muted
