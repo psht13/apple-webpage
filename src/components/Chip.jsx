@@ -71,7 +71,6 @@ const Chip = () => {
                 playsInline
                 preload="none"
                 muted
-                autoPlay
                 ref={videoRef}
               >
                 <source src={frameVideo} type="video/mp4" />
